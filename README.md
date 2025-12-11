@@ -52,10 +52,84 @@ df-quiz/
   - cond4: 깨끗한 데이터
 
 ## 🚀 사용 방법
-* ### 순서대로 사용
-1. DF_DFU_Character.py
-2. DF_text_condition_classification.py
-3. DF_init_consonants.py
+
+<details>
+<summary><b>📋 순서대로 사용하기 (클릭하여 펼치기)</b></summary>
+
+### 1단계: 저장소 클론
+```bash
+git clone https://github.com/minjoyeee/df-quiz.git
+cd df-quiz
+```
+
+### 2단계: 가상 환경 생성 및 활성화(선택)
+```bash
+python -m venv venv
+venv\Scripts\activate  # Windows
+source venv/bin/activate  # Mac/Linux
+```
+
+### 3단계: 패키지 설치
+```bash
+pip install -r requirements.txt
+# 또는
+pip install pandas openpyxl playwright hangul-utils
+playwright install
+```
+
+### 4단계: 순서대로 코드 실행
+```bash
+# 1. 데이터 크롤링
+python code/DF_DFU_Character.py
+
+# 2. 데이터 정제 및 분류
+python code/DF_text_condition_classification.py
+
+# 3. 초성 추출
+python code/DF_init_consonants.py
+```
+
+### 5단계: 결과 확인
+`data/` 폴더에서 최종 파일 확인:
+- ✅ `DF_DFU_Character_classified_init_consonants.xlsx`
+- ✅ `DF_DFU_Dungeon_classified_init_consonants.xlsx`
+
+</details>
+
+<details>
+<summary><b>⚙️ 경로 설정 (config.py 사용)</b></summary>
+
+이 프로젝트는 **config.py**로 모든 경로를 자동 관리합니다. 따라서 누가 받든 경로 수정 없이 바로 실행 가능합니다.
+
+### config.py의 역할
+
+```python
+# config.py에서 자동으로 설정됨
+PROJECT_ROOT = Path(__file__).parent.absolute()  # 프로젝트 경로 자동 계산
+
+# 데이터 경로 (모두 자동)
+CHARACTER_XLSX              # data/DF_DFU_Character.xlsx
+CHARACTER_CLASSIFIED        # data/DF_DFU_Character_classified.xlsx
+CHARACTER_WITH_CONSONANTS   # data/DF_DFU_Character_classified_init_consonants.xlsx
+```
+
+### 각 코드에서 사용 방법
+
+```python
+# ❌ 이전 (절대경로 - 불편)
+df = pd.read_excel('C:\\Users\\Yourname\\Desktop\\...\\DF_DFU_Character.xlsx')
+
+# ✅ 이후 (config.py 사용 - 자동)
+from config import CHARACTER_XLSX
+df = pd.read_excel(CHARACTER_XLSX)
+```
+
+**장점:**
+- GitHub에서 받은 사람도 바로 실행 가능
+- 경로 변경이 필요하면 config.py만 수정
+- 전문적인 프로젝트 구조
+
+</details>
 
 
 ## 📝 개발 계획
