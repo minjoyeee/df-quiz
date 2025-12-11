@@ -32,7 +32,7 @@ df-quiz/
         DF_DFU_Dungeon.xlsx
         DF_DFU_Dungeon_classified.xlsx
         DF_DFU_Dungeon_classified_init_consonants.xlsx ✅
-
+```
 
 ## 🛠 기술 스택
 
@@ -52,17 +52,16 @@ df-quiz/
   - cond4: 깨끗한 데이터
 
 ## 🚀 사용 방법
-* 순서대로 사용용
-1. DF_DFU_Character.py
-2. DF_text_condition_classification.py
-3. DF_init_consonants.py
+* 순서대로 사용
+    1. DF_DFU_Character.py
+    2. DF_text_condition_classification.py
+    3. DF_init_consonants.py
 
 
 ## 📝 개발 계획
-```markdown
+
 - [ ] 퀴즈 주제 추가
 ~~ - [ ] 점수 시스템 및 랭킹 ~~
-```
 
 ## 🔍 주의사항
 
@@ -72,4 +71,4 @@ df-quiz/
 
 ## 📄 라이선스
 
-MIT
+minjoyeee
