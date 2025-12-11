@@ -27,11 +27,11 @@ df-quiz/
 └───📁data
         DF_DFU_Character.xlsx
         DF_DFU_Character_classified.xlsx
-        DF_DFU_Character_classified_init_consonants.xlsx
+        DF_DFU_Character_classified_init_consonants.xlsx ✅
 
         DF_DFU_Dungeon.xlsx
         DF_DFU_Dungeon_classified.xlsx
-        DF_DFU_Dungeon_classified_init_consonants.xlsx
+        DF_DFU_Dungeon_classified_init_consonants.xlsx ✅
 
 
 ## 🛠 기술 스택
@@ -46,21 +46,22 @@ df-quiz/
 
 - 총 996명 인물 데이터, 276개 던전명 데이터터
 - 조건별 분류:
-  - cond1: 한자만 포함 (2개)
-  - cond2: 특수문자만 포함 (44개)
-  - cond3: 한자 + 특수문자 (5개)
-  - cond4: 깨끗한 데이터 (945개)
+  - cond1: 한자만 포함
+  - cond2: 특수문자만 포함
+  - cond3: 한자 + 특수문자
+  - cond4: 깨끗한 데이터
 
 ## 🚀 사용 방법
-> 1. DF_DFU_Character.py
-> 2. DF_text_condition_classification.py
-> 3. DF_init_consonants.py
+* 순서대로 사용용
+1. DF_DFU_Character.py
+2. DF_text_condition_classification.py
+3. DF_init_consonants.py
 
 
 ## 📝 개발 계획
 
 - [ ] 퀴즈 주제 추가
-~~- [ ] 점수 시스템 및 랭킹~~
+~~ - [ ] 점수 시스템 및 랭킹 ~~
 
 
 ## 🔍 주의사항
