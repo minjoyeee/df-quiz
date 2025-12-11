@@ -53,9 +53,9 @@ df-quiz/
 
 ## 🚀 사용 방법
 * 순서대로 사용
-    > 1. DF_DFU_Character.py
-    > 2. DF_text_condition_classification.py
-    > 3. DF_init_consonants.py
+1. DF_DFU_Character.py
+2. DF_text_condition_classification.py
+3. DF_init_consonants.py
 
 
 ## 📝 개발 계획
