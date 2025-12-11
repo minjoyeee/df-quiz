@@ -44,7 +44,7 @@ df-quiz/
 
 ## 📈 데이터 현황
 
-- 총 996명 인물 데이터, 276개 던전명 데이터터
+- 총 996명 인물 데이터, 276개 던전명 데이터
 - 조건별 분류:
   - cond1: 한자만 포함
   - cond2: 특수문자만 포함
@@ -52,7 +52,7 @@ df-quiz/
   - cond4: 깨끗한 데이터
 
 ## 🚀 사용 방법
-###* 순서대로 사용
+### * 순서대로 사용
 1. DF_DFU_Character.py
 2. DF_text_condition_classification.py
 3. DF_init_consonants.py
