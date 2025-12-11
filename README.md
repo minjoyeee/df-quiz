@@ -52,7 +52,7 @@ df-quiz/
   - cond4: 깨끗한 데이터
 
 ## 🚀 사용 방법
-* 순서대로 사용
+###* 순서대로 사용
 1. DF_DFU_Character.py
 2. DF_text_condition_classification.py
 3. DF_init_consonants.py
