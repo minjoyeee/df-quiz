@@ -19,6 +19,7 @@ df-quiz/
 │   .gitignore
 │   config.py
 │   README.md
+│   requirements.txt
 │
 ├───📁code
 │       DF_DFU_Character.py # Playwright 크롤링
