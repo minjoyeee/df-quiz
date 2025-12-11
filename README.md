@@ -1,14 +1,14 @@
 # df-quiz
 
-던파(Dungeon Fighter Universe) 게임 인물 이름 초성 퀴즈 데이터셋 및 게임 개발 프로젝트
+던파(Dungeon Fighter Universe) 게임 인물 이름 초성 퀴즈 데이터셋 만들기기
 
 ## 🎯 목적
 
-던파 IP의 게임 인물들을 대상으로 초성 퀴즈 데이터를 수집, 정제, 분석하여 퀴즈 게임 엔진 개발
+던파 IP의 게임 데이터들을 대상으로 초성 퀴즈 데이터로 변환(수집, 정제, 저장)
 
 ## 📊 주요 기능
 
-- **웹 크롤링**: Playwright를 활용한 DFU 포털 데이터 수집
+- **웹 크롤링**: Playwright를 활용한 [🌐DFU 포털 데이터🌐](https://www.dnf-universe.com/stories "DFU 사이트") 수집 
 - **데이터 정제**: 한자, 특수문자 처리 및 조건별 분류
 - **한글 NLP**: 초성 추출 (hangul_utils 활용)
 - **데이터 관리**: pandas를 통한 Excel 기반 데이터 처리
@@ -36,7 +36,7 @@ df-quiz/
 
 ## 🛠 기술 스택
 
-- **Python 3.12
+- **Python 3.12**
 - **Playwright**: 웹 크롤링 (JavaScript 렌더링 대응)
 - **pandas**: 데이터 처리
 - **openpyxl**: Excel 파일 조작
@@ -52,7 +52,7 @@ df-quiz/
   - cond4: 깨끗한 데이터
 
 ## 🚀 사용 방법
-### * 순서대로 사용
+* ### 순서대로 사용
 1. DF_DFU_Character.py
 2. DF_text_condition_classification.py
 3. DF_init_consonants.py
@@ -61,6 +61,7 @@ df-quiz/
 ## 📝 개발 계획
 
 - [ ] 퀴즈 주제 추가
+- [ ] 장비 사전 엔드포인트 추가
 - [ ] ~~점수 시스템 및 랭킹~~
 
 ## 🔍 주의사항
