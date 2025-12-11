@@ -17,6 +17,7 @@
 ```
 df-quiz/
 │   .gitignore
+│   config.py
 │   README.md
 │
 ├───📁code
@@ -25,11 +26,11 @@ df-quiz/
 │       DF_init_consonants.py # 초성 추가
 │
 └───📁data
-        DF_DFU_Character.xlsx
+        DF_DFU_Character_Raw.xlsx
         DF_DFU_Character_classified.xlsx
         DF_DFU_Character_classified_init_consonants.xlsx ✅
 
-        DF_DFU_Dungeon.xlsx
+        DF_DFU_Dungeon_Raw.xlsx
         DF_DFU_Dungeon_classified.xlsx
         DF_DFU_Dungeon_classified_init_consonants.xlsx ✅
 ```
@@ -106,27 +107,43 @@ python code/DF_init_consonants.py
 ```python
 # config.py에서 자동으로 설정됨
 PROJECT_ROOT = Path(__file__).parent.absolute()  # 프로젝트 경로 자동 계산
+DATA_DIR = PROJECT_ROOT / 'data'                 # data 폴더 경로
+```
 
-# 데이터 경로 (모두 자동)
-CHARACTER_XLSX              # data/DF_DFU_Character.xlsx
-CHARACTER_CLASSIFIED        # data/DF_DFU_Character_classified.xlsx
-CHARACTER_WITH_CONSONANTS   # data/DF_DFU_Character_classified_init_consonants.xlsx
+### 파일명은 코드에서 동적으로 생성
+
+```python
+# target_column 변수에 따라 파일명 자동 생성
+target_column = 'dungeon'  # 또는 'character', 'equipment' 등
+
+# 1단계: 크롤링
+output_path = DATA_DIR / f'{target_column}_raw.xlsx'
+
+# 2단계: 정제
+input_path = DATA_DIR / f'{target_column}_raw.xlsx'
+output_path = DATA_DIR / f'{target_column}_classified.xlsx'
+
+# 3단계: 초성 추출
+input_path = DATA_DIR / f'{target_column}_classified.xlsx'
+output_path = DATA_DIR / f'{target_column}_classified_init_consonants.xlsx'
 ```
 
 ### 각 코드에서 사용 방법
 
 ```python
 # ❌ 이전 (절대경로 - 불편)
-df = pd.read_excel('C:\\Users\\Yourname\\Desktop\\...\\DF_DFU_Character.xlsx')
+df = pd.read_excel('C:\\Users\\Yourname\\Desktop\\...\\dungeon_raw.xlsx')
 
 # ✅ 이후 (config.py 사용 - 자동)
-from config import CHARACTER_XLSX
-df = pd.read_excel(CHARACTER_XLSX)
+from config import DATA_DIR
+output_path = DATA_DIR / f'{target_column}_raw.xlsx'
+df.to_excel(output_path, index=False)
 ```
 
 **장점:**
 - GitHub에서 받은 사람도 바로 실행 가능
-- 경로 변경이 필요하면 config.py만 수정
+- `target_column` 변수만 바꾸면 자동으로 파일명 변경
+- 새로운 항목 추가 시 코드 수정 최소화
 - 전문적인 프로젝트 구조
 
 </details>

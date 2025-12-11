@@ -15,16 +15,6 @@ PROJECT_ROOT = Path(__file__).parent.absolute()
 # ============================================================================
 DATA_DIR = PROJECT_ROOT / 'data'
 
-# 캐릭터 데이터
-CHARACTER_XLSX = DATA_DIR / 'DF_DFU_Character.xlsx'
-CHARACTER_CLASSIFIED = DATA_DIR / 'DF_DFU_Character_classified.xlsx'
-CHARACTER_WITH_CONSONANTS = DATA_DIR / 'DF_DFU_Character_classified_init_consonants.xlsx'
-
-# 던전 데이터
-DUNGEON_XLSX = DATA_DIR / 'DF_DFU_Dungeon.xlsx'
-DUNGEON_CLASSIFIED = DATA_DIR / 'DF_DFU_Dungeon_classified.xlsx'
-DUNGEON_WITH_CONSONANTS = DATA_DIR / 'DF_DFU_Dungeon_classified_init_consonants.xlsx'
-
 # ============================================================================
 # 코드 경로
 # ============================================================================
@@ -60,7 +50,6 @@ PATTERNS = {
 # 웹 크롤링 설정
 # ============================================================================
 DFU_URL = 'https://www.dnf-universe.com/stories'
-DFU_DUNGEON_URL = 'https://www.dnf-universe.com/dungeons'
 
 # 타임아웃 설정 (밀리초)
 WAIT_TIMEOUT = 3000  # 3초
